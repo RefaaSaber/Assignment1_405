@@ -1,0 +1,218 @@
+/* ===================== RESET ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================== BODY ===================== */
+body {
+    font-family: "Courier New", monospace;
+    background-image: url("Image/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;   /* makes page full screen height */
+}
+
+
+/* Remove underline from ALL links */
+a {
+    text-decoration: none;
+    color: green;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* ===================== HEADER ===================== */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: inline-block;
+}
+
+.header-left h1 {
+    font-size: 28px;
+}
+
+.header-left span {
+    font-size: 14px;
+    color: #ccc;
+    margin-left: 10px;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    background-color: #555;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    background-color: #777;
+}
+
+/* ===================== MAIN LAYOUT ===================== */
+.container {
+    display: flex;
+    width: 100%;        /* full width */
+    padding: 40px;      /* space from edges */
+    flex: 1;            /* push footer down */
+}
+
+
+/* ===================== SIDEBAR ===================== */
+.sidebar {
+    width: 280px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 170px;
+    border-radius: 50%;
+    border: 4px solid yellow; /* BONUS rounded image */
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 8px 0;
+}
+
+.sidebar hr {
+    margin: 20px 0;
+    border: 1px dashed #aaa;
+}
+
+/* Fragment links (inside sidebar) */
+.sidebar ul li a {
+    color: darkblue;       /* different color */
+    font-weight: bold;     /* bold text */
+}
+
+.sidebar ul li a:hover {
+    color: red;            /* different hover effect */
+}
+
+/* ===================== CONTENT ===================== */
+.content {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #aaa;
+    padding-bottom: 5px;
+}
+
+/* Pseudo-element */
+.about-text::first-letter {
+    font-size: 30px;
+    color: green;
+    font-weight: bold;
+}
+
+.content ul {
+    padding-left: 50px;
+}
+
+.content ul li {
+    margin-bottom: 8px;
+}
+
+
+/* ===================== TABLE ===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Odd rows */
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Different hover */
+tr:nth-child(even):hover {
+    background-color: #ddd;
+}
+
+tr:nth-child(odd):hover {
+    background-color: #ccc;
+}
+
+/* ===================== FORM ===================== */
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #aaa;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+   
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        float: none;
+        margin-top: 10px;
+    }
+}
