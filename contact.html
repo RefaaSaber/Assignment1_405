@@ -1,131 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <div class="header-left">
-        <h1>Refaa Saber</h1>
-        <span>IT Student</span>
-    </div>
-
-    <nav>
-        <a href="index.html">CV</a>
-        <a href="schedule.html">Class Schedule</a>
-        <a href="coursework.html">Course Work</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
-
-<div class="container">
-
-    <!-- LEFT SIDEBAR -->
-    <div class="sidebar">
-        <img src="Image/profile.jpg" class="profile-pic" alt="Profile">
-
-        <ul>
-            <li><a href="index.html#about" class="fragment-link">About Me</a></li>
-            <li><a href="index.html#education" class="fragment-link">Education</a></li>
-            <li><a href="index.html#skills" class="fragment-link">Skills</a></li>
-        </ul>
-
-        <hr>
-
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:refaa.med21@gmail.com">refaa.med21@gmail.com</a></p>
-        <p>Phone: <a href="tel:+966500000000">+966500000000</a></p>
-
-        <div class="social-icons">
-            <a href="https://x.com/yourusername" target="_blank" rel="noopener">
-                <img src="Image/X.jpg" alt="X">
-            </a>
-
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
-                <img src="Image/Linkedin.jpg" alt="LinkedIn">
-            </a>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="header-left">
+            <h1>Refaa Saber</h1>
+            <span>IT Student</span>
         </div>
+
+        <nav>
+            <a href="index.html">CV</a>
+            <a href="schedule.html">Class Schedule</a>
+            <a href="coursework.html">Course Work</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- ===== MAIN CONTAINER ===== -->
+    <div class="container">
+
+        <!-- ===== SIDEBAR ===== -->
+        <div class="sidebar">
+
+            <img src="Image/profile.jpg"
+                 class="profile-pic"
+                 alt="Profile Image">
+
+            <ul>
+                <li><a href="index.html#about" class="fragment-link">About Me</a></li>
+                <li><a href="index.html#education" class="fragment-link">Education</a></li>
+                <li><a href="index.html#skills" class="fragment-link">Skills</a></li>
+            </ul>
+
+            <hr>
+
+            <h3>Contact</h3>
+
+            <p>
+                Email:
+                <a href="mailto:refaa.med21@gmail.com">
+                    refaa.med21@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Phone:
+                <a href="tel:+966500000000">
+                    +966500000000
+                </a>
+            </p>
+
+            <div class="social-icons">
+                <a href="https://x.com/yourusername"
+                   target="_blank"
+                   rel="noopener">
+                    <img src="Image/X.jpg" alt="X">
+                </a>
+
+                <a href="https://linkedin.com/in/yourusername"
+                   target="_blank"
+                   rel="noopener">
+                    <img src="Image/Linkedin.jpg" alt="LinkedIn">
+                </a>
+            </div>
+
+        </div>
+        <!-- ===== END SIDEBAR ===== -->
+
+
+        <!-- ===== CONTENT ===== -->
+        <div class="content">
+
+            <h2>Contact</h2>
+
+            <form action="https://webhook.site/47e3ce76-8041-4b53-b8bb-213603248679"
+                  method="POST">
+
+                <!-- Name -->
+                <label for="name">Name:</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       required
+                       minlength="3">
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email">
+
+                <!-- Message -->
+                <label for="message">Message:</label>
+                <textarea id="message"
+                          name="message"
+                          rows="10"
+                          placeholder="Write your message"
+                          required
+                          minlength="10"></textarea>
+
+                <!-- Message Type -->
+                <label><strong>Message Type:</strong></label>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio"
+                               name="type"
+                               value="Complaint"
+                               required>
+                        Complaint
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio"
+                               name="type"
+                               value="Inquiry">
+                        Inquiry
+                    </label>
+                </div>
+
+                <br>
+
+                <button type="submit">Send</button>
+
+            </form>
+
+        </div>
+        <!-- ===== END CONTENT ===== -->
+
     </div>
-    <!-- ✅ SIDEBAR CLOSED CORRECTLY -->
+    <!-- ===== END CONTAINER ===== -->
 
 
-    <!-- RIGHT CONTENT -->
-    <div class="content">
-
-        <h2>Contact</h2>
-
-        <form 
-    action="https://webhook.site/47e3ce76-8041-4b53-b8bb-213603248679" 
-    method="POST">
-
-    <!-- Name (Required) -->
-    <label for="name">Name:</label>
-    <input 
-        type="text" 
-        id="name"
-        name="name"
-        placeholder="Enter your name"
-        required
-        minlength="3">
-
-    <!-- Email (Optional but Valid if Entered) -->
-    <label for="email">Email:</label>
-    <input 
-        type="email" 
-        id="email"
-        name="email"
-        placeholder="Enter your email">
-
-    <!-- Message -->
-    <label for="message">Message:</label>
-    <textarea 
-        id="message"
-        name="message"
-        rows="10"
-        placeholder="Write your message"
-        required
-        minlength="10"></textarea>
-
-    <!-- Message Type -->
-    <label><strong>Message Type:</strong></label>
-
-    <div class="radio-group">
-        <label class="radio-option">
-            <input 
-                type="radio" 
-                name="type" 
-                value="Complaint"
-                required>
-            Complaint
-        </label>
-
-        <label class="radio-option">
-            <input 
-                type="radio" 
-                name="type" 
-                value="Inquiry">
-            Inquiry
-        </label>
-    </div>
-
-    <br>
-
-    <button type="submit">Send</button>
-
-</form>
-
-
-    </div>
-
-</div>
-
-<footer>
-    © 2026 Refaa Saber
-</footer>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        © 2026 Refaa Saber
+    </footer>
 
 </body>
 </html>
+
+
 
