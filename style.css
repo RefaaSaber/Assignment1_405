@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 /* ===================== BODY ===================== */
 body {
     font-family: "Courier New", monospace;
@@ -13,16 +12,14 @@ body {
     background-attachment: fixed;
     background-size: cover;
     color: #333;
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-
 /* ===================== LINKS ===================== */
 a {
-    text-decoration: none;   /* remove underline */
+    text-decoration: none;
     color: green;
     transition: 0.3s;
 }
@@ -32,7 +29,6 @@ a:hover {
     opacity: 0.8;
 }
 
-
 /* ===================== HEADER ===================== */
 header {
     background-color: #333;
@@ -41,7 +37,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,7 +51,6 @@ header {
     color: #ccc;
     margin-left: 10px;
 }
-
 
 /* ===================== NAVIGATION ===================== */
 nav a {
@@ -74,15 +68,13 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-
-/* ===================== MAIN LAYOUT (FLEXBOX) ===================== */
+/* ===================== LAYOUT ===================== */
 .container {
     display: flex;
     width: 100%;
     padding: 40px;
     flex: 1;
 }
-
 
 /* ===================== SIDEBAR ===================== */
 .sidebar {
@@ -98,12 +90,11 @@ nav a:hover {
     animation: borderColorChange 4s infinite;
 }
 
-/* Border color animation */
 @keyframes borderColorChange {
-    0%   { border-color: red; }
-    25%  { border-color: orange; }
-    50%  { border-color: yellow; }
-    75%  { border-color: green; }
+    0% { border-color: red; }
+    25% { border-color: orange; }
+    50% { border-color: yellow; }
+    75% { border-color: green; }
     100% { border-color: red; }
 }
 
@@ -120,22 +111,6 @@ nav a:hover {
     border: 1px dashed #aaa;
 }
 
-
-/* Fragment links */
-.fragment-link {
-    color: darkblue;
-    font-weight: bold;
-    background-color: #e6f0ff;
-    padding: 4px 8px;
-    border-radius: 5px;
-}
-
-.fragment-link:hover {
-    background-color: #cce0ff;
-    color: black;
-}
-
-
 /* ===================== CONTENT ===================== */
 .content {
     flex: 1;
@@ -149,144 +124,76 @@ nav a:hover {
     padding-bottom: 5px;
 }
 
-.content ul {
-    padding-left: 40px;
-}
-
-.content ul li {
-    margin-bottom: 8px;
-}
-
-
-/* Pseudo-element (About Me) */
-.about-text::first-letter {
-    font-size: 28px;
-    color: green;
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 8px;
-    line-height: 1;
-}
-
-
-/* ===================== TABLE ===================== */
-table {
+/* ===================== TABLE BASE ===================== */
+.schedule-table,
+.courses-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-th {
+.schedule-table th,
+.courses-table th {
     background-color: #333;
     color: white;
     padding: 12px;
     text-align: center;
 }
 
-td {
+.schedule-table td,
+.courses-table td {
     padding: 10px;
     border: 1px solid #ccc;
 }
 
-/* ================= TABLE ZEBRA ================= */
-
-/* Style ONLY td cells */
-tbody tr:nth-child(odd) td {
+/* ===================== SCHEDULE TABLE ZEBRA ===================== */
+.schedule-table tbody tr:nth-child(odd) td {
     background-color: #f4f4f4;
 }
 
-tbody tr:nth-child(even) td {
+.schedule-table tbody tr:nth-child(even) td {
     background-color: #ffffff;
 }
 
-/* Different hover colors */
-tbody tr:nth-child(odd):hover td {
+/* Schedule Hover */
+.schedule-table tbody tr:nth-child(odd):hover td {
     background-color: #d6eaf8;
+    transition: 0.3s;
 }
 
-tbody tr:nth-child(even):hover td {
+.schedule-table tbody tr:nth-child(even):hover td {
     background-color: #fdebd0;
+    transition: 0.3s;
 }
 
-/* Day column styling */
-.day-cell {
-   background-color: #d4edda;   
-    color: #155724;              
-    text-align: center;
-    font-weight: bold;
+/* ===================== COURSES TABLE ZEBRA ===================== */
+.courses-table tbody tr:nth-child(odd) td {
+    background-color: #e8f5e9;
 }
 
-/* Line between each day */
+.courses-table tbody tr:nth-child(even) td {
+    background-color: #ffffff;
+}
+
+/* Courses Hover */
+.courses-table tbody tr:nth-child(odd):hover td {
+    background-color: #c8e6c9;
+    transition: 0.3s;
+}
+
+.courses-table tbody tr:nth-child(even):hover td {
+    background-color: #fff3e0;
+    transition: 0.3s;
+}
+
+/* ===================== DAY COLUMN ===================== */
 .day-cell {
-    background-color: #d4edda;   
+    background-color: #d4edda;
     color: #155724;
-    text-align: center;
     font-weight: bold;
-    border-top: 1px solid #ccc; 
+    text-align: center;
+    border-top: 1px solid #ccc;
 }
-
-
-
-/* ===================== FORM ===================== */
-form input,
-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-    border: 1px solid #aaa;
-}
-
-button {
-    padding: 10px 25px;
-    background-color: #d6eaf8;
-    color: #154360;
-    border: 1px solid #85c1e9;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #85c1e9;
-    color: white;
-    transform: scale(1.05);
-}
-
-
-/* ===================== SOCIAL ICONS ===================== */
-.social-icons {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-icons img {
-    width: 30px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);
-    opacity: 0.7;
-}
-
-
-/* ===================== RADIO BUTTON GROUP ===================== */
-.radio-group {
-    display: flex;
-    gap: 40px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.radio-option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
 
 /* ===================== FOOTER ===================== */
 footer {
@@ -296,10 +203,10 @@ footer {
     padding: 15px;
 }
 
-
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
 }
+
