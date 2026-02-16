@@ -216,3 +216,34 @@ footer {
         margin-top: 10px;
     }
 }
+
+.radio-group {
+    display: flex;
+    gap: 40px;           /* space between options */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.radio-option {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;            /* space between circle and text */
+    cursor: pointer;
+}
+
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
