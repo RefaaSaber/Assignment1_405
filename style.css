@@ -160,7 +160,7 @@ nav a:hover {
 
 /* Pseudo-element (About Me) */
 .about-text::first-letter {
-    font-size: 40px;
+    font-size: 28px;
     color: green;
     font-weight: bold;
     margin-right: 8px;
