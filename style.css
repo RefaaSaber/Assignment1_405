@@ -9,11 +9,13 @@
 /* ===================== BODY ===================== */
 body {
     font-family: "Courier New", monospace;
-    background-image: url("Image/background.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    color: #333;
 
+    background-image: url("Image/background.jpg");
+    background-size: cover;        /* fill screen */
+    background-position: center;   /* center image */
+    background-repeat: no-repeat;  /* no repeating */
+    background-attachment: fixed;  /* stay fixed when scrolling */
+    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
