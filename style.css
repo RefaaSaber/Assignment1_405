@@ -188,7 +188,9 @@ td {
     border: 1px solid #ccc;
 }
 
-/* Zebra rows (only TD cells) */
+/* ================= TABLE ZEBRA ================= */
+
+/* Style ONLY td cells */
 tbody tr:nth-child(odd) td {
     background-color: #f4f4f4;
 }
@@ -197,7 +199,7 @@ tbody tr:nth-child(even) td {
     background-color: #ffffff;
 }
 
-/* Different hover effects (only TD cells) */
+/* Different hover colors */
 tbody tr:nth-child(odd):hover td {
     background-color: #d6eaf8;
 }
@@ -205,6 +207,24 @@ tbody tr:nth-child(odd):hover td {
 tbody tr:nth-child(even):hover td {
     background-color: #fdebd0;
 }
+
+/* Day column styling */
+.day-cell {
+   background-color: #d4edda;   
+    color: #155724;              
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Line between each day */
+.day-cell {
+    background-color: #d4edda;   
+    color: #155724;
+    text-align: center;
+    font-weight: bold;
+    border-top: 1px solid #ccc; 
+}
+
 
 
 /* ===================== FORM ===================== */
@@ -283,4 +303,3 @@ footer {
         flex-direction: column;
     }
 }
-
