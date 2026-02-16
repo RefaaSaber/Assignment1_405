@@ -188,21 +188,21 @@ td {
     border: 1px solid #ccc;
 }
 
-/* Zebra rows */
-tbody tr:nth-child(odd) {
+/* Zebra rows (only TD cells) */
+tbody tr:nth-child(odd) td {
     background-color: #f4f4f4;
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even) td {
     background-color: #ffffff;
 }
 
-/* Different hover effects */
-tbody tr:nth-child(odd):hover {
+/* Different hover effects (only TD cells) */
+tbody tr:nth-child(odd):hover td {
     background-color: #d6eaf8;
 }
 
-tbody tr:nth-child(even):hover {
+tbody tr:nth-child(even):hover td {
     background-color: #fdebd0;
 }
 
