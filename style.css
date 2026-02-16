@@ -163,6 +163,7 @@ nav a:hover {
     font-size: 28px;
     color: green;
     font-weight: bold;
+    display: inline-block;
     margin-right: 8px;
     line-height: 1;
 }
