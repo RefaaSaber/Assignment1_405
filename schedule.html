@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Class Schedule</title>
@@ -22,12 +23,9 @@
     </nav>
 </header>
 
-
 <div class="container">
 
-    <!-- SIDEBAR -->
     <div class="sidebar">
-
         <img src="Image/profile.jpg" class="profile-pic" alt="Profile Image">
 
         <ul>
@@ -40,47 +38,30 @@
 
         <h3>Contact</h3>
 
-        <p>
-            Email:
+        <p>Email:
             <a href="mailto:refaa.med21@gmail.com">
                 refaa.med21@gmail.com
             </a>
         </p>
 
-        <p>
-            Phone:
+        <p>Phone:
             <a href="tel:+966500000000">
                 +966500000000
             </a>
         </p>
-
-        <div class="social-icons">
-            <a href="https://x.com/" target="_blank" rel="noopener">
-                <img src="Image/X.jpg" alt="X">
-            </a>
-
-            <a href="https://linkedin.com/" target="_blank" rel="noopener">
-                <img src="Image/Linkedin.jpg" alt="LinkedIn">
-            </a>
-        </div>
-
     </div>
-    <!-- END SIDEBAR -->
 
 
-    <!-- CONTENT -->
     <div class="content">
 
+        <!-- ================= SCHEDULE TABLE ================= -->
         <h2>Class Schedule</h2>
 
-        <table>
+        <table class="schedule-table">
 
             <thead>
                 <tr>
-                    <th rowspan="2">Day</th>
-                    <th colspan="4">Class Information</th>
-                </tr>
-                <tr>
+                    <th>Day</th>
                     <th>Time</th>
                     <th>Course</th>
                     <th>Section</th>
@@ -89,118 +70,79 @@
             </thead>
 
             <tbody>
-
-                <!-- SUNDAY -->
                 <tr>
-                    <th rowspan="4" class="day-cell">Sunday</th>
+                    <td>Sunday</td>
                     <td>8:00 AM - 8:50 AM</td>
                     <td>CPIT 345</td>
                     <td>AAR</td>
                     <td>Dr. Habah</td>
                 </tr>
                 <tr>
-                    <td>10:00 AM - 10:50 AM</td>
-                    <td>CPIT 405</td>
-                    <td>EAR</td>
-                    <td>Dr. Rania</td>
-                </tr>
-                <tr>
-                    <td>11:00 AM - 11:50 AM</td>
-                    <td>CPIT 456</td>
-                    <td>VAR</td>
-                    <td>Dr. Huda</td>
-                </tr>
-                <tr>
-                    <td>1:00 PM - 2:20 PM</td>
-                    <td>CPIT 405</td>
-                    <td>EAR</td>
-                    <td>Dr. Rania</td>
-                </tr>
-
-                <!-- MONDAY -->
-                <tr>
-                    <th rowspan="2" class="day-cell">Monday</th>
+                    <td>Monday</td>
                     <td>8:00 AM - 9:20 AM</td>
                     <td>CPIT 345</td>
                     <td>AAR</td>
                     <td>Dr. Byan</td>
                 </tr>
                 <tr>
-                    <td>11:00 PM - 11:50 PM</td>
-                    <td>CPIT 470</td>
-                    <td>GAR</td>
-                    <td>Dr. Linda</td>
-                </tr>
-
-                <!-- TUESDAY -->
-                <tr>
-                    <th rowspan="4" class="day-cell">Tuesday</th>
+                    <td>Tuesday</td>
                     <td>8:00 AM - 8:50 AM</td>
                     <td>CPIT 345</td>
                     <td>AAR</td>
                     <td>Dr. Habah</td>
                 </tr>
                 <tr>
-                    <td>10:00 AM - 10:50 AM</td>
-                    <td>CPIT 405</td>
-                    <td>EAR</td>
-                    <td>Dr. Rania</td>
-                </tr>
-                <tr>
+                    <td>Wednesday</td>
                     <td>11:00 AM - 11:50 AM</td>
-                    <td>CPIT 456</td>
-                    <td>VAR</td>
-                    <td>Dr. Huda</td>
-                </tr>
-                <tr>
-                    <td>1:00 PM - 2:20 PM</td>
-                    <td>CPIT 456</td>
-                    <td>VAR</td>
-                    <td>Dr. Sara</td>
-                </tr>
-
-                <!-- WEDNESDAY -->
-                <tr>
-                    <th rowspan="2" class="day-cell">Wednesday</th>
-                    <td>11:00 PM - 11:50 PM</td>
                     <td>CPIT 470</td>
                     <td>GAR</td>
                     <td>Dr. Linda</td>
                 </tr>
                 <tr>
-                    <td>1:00 PM - 2:20 PM</td>
-                    <td>CPIT 456</td>
-                    <td>VAR</td>
-                    <td>Dr. Eman</td>
-                </tr>
-
-                <!-- THURSDAY -->
-                <tr>
-                    <th rowspan="3" class="day-cell">Thursday</th>
+                    <td>Thursday</td>
                     <td>8:00 AM - 8:50 AM</td>
                     <td>CPIT 345</td>
                     <td>AAR</td>
                     <td>Dr. Habah</td>
                 </tr>
                 <tr>
-                    <td>10:00 AM - 10:50 AM</td>
-                    <td>CPIT 405</td>
-                    <td>EAR</td>
-                    <td>Dr. Rania</td>
-                </tr>
-                <tr>
-                    <td>11:00 AM - 11:50 AM</td>
-                    <td>CPIT 456</td>
-                    <td>VAR</td>
-                    <td>Dr. Huda</td>
-                </tr>
-
-                <!-- FRIDAY -->
-                <tr>
-                    <th class="day-cell">Friday</th>
+                    <td>Friday</td>
                     <td colspan="4" style="text-align:center;">No Classes</td>
                 </tr>
+            </tbody>
 
+        </table>
+
+
+        <!-- ================= COURSES TABLE ================= -->
+        <h2 style="margin-top:40px;">Courses I Took</h2>
+
+        <table class="courses-table">
+
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>CPIT 405</td>
+                    <td>Internet Applications</td>
+                </tr>
+                <tr>
+                    <td>CPIT 305</td>
+                    <td>Advanced Programming</td>
+                </tr>
+                <tr>
+                    <td>CPIT 110</td>
+                    <td>Problem-Solving and Programming</td>
+                </tr>
+                <tr>
+                    <td>CPIT 111</td>
+                    <td>Computer Skills</td>
+                </tr>
             </tbody>
 
         </table>
@@ -215,5 +157,7 @@
 
 </body>
 </html>
+
+
 
 
