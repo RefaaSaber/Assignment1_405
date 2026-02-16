@@ -5,20 +5,6 @@
     box-sizing: border-box;
 }
 
-.profile-pic {
-    width: 170px;
-    border-radius: 50%;
-    border: 4px solid red;
-    animation: borderColorChange 4s infinite;
-}
-
-@keyframes borderColorChange {
-    0%   { border-color: red; }
-    25%  { border-color: orange; }
-    50%  { border-color: yellow; }
-    75%  { border-color: green; }
-    100% { border-color: red; }
-}
 
 /* ===================== BODY ===================== */
 body {
@@ -30,13 +16,13 @@ body {
 
     display: flex;
     flex-direction: column;
-    min-height: 100vh;   /* makes page full screen height */
+    min-height: 100vh;
 }
 
 
-/* Remove underline from ALL links */
+/* ===================== LINKS ===================== */
 a {
-    text-decoration: none;
+    text-decoration: none;   /* remove underline */
     color: green;
     transition: 0.3s;
 }
@@ -55,10 +41,10 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
 
-.header-left {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-left h1 {
@@ -71,52 +57,30 @@ header {
     margin-left: 10px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-
+/* ===================== NAVIGATION ===================== */
 nav a {
     background-color: #555;
     color: white;
     padding: 8px 15px;
     margin-left: 10px;
-    border-radius: 3px;
+    border-radius: 4px;
     transition: all 0.3s ease-in-out;
 }
 
 nav a:hover {
-    background-color: #ffcc00;   /* yellow */
+    background-color: #ffcc00;
     color: black;
+    transform: scale(1.05);
 }
 
 
-button {
-    padding: 10px 25px;
-    background-color: #d6eaf8;
-    color: #154360;
-    border: 1px solid #85c1e9;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;  /* animation */
-}
-
-button:hover {
-    background-color: #85c1e9;
-    color: white;
-    transform: scale(1.05);   /* zoom effect */
-}
-
-
-
-/* ===================== MAIN LAYOUT ===================== */
+/* ===================== MAIN LAYOUT (FLEXBOX) ===================== */
 .container {
     display: flex;
-    width: 100%;        /* full width */
-    padding: 40px;      /* space from edges */
-    flex: 1;            /* push footer down */
+    width: 100%;
+    padding: 40px;
+    flex: 1;
 }
 
 
@@ -129,8 +93,18 @@ button:hover {
 .profile-pic {
     width: 170px;
     border-radius: 50%;
-    border: 4px solid yellow; /* BONUS rounded image */
+    border: 4px solid red;
     margin-bottom: 20px;
+    animation: borderColorChange 4s infinite;
+}
+
+/* Border color animation */
+@keyframes borderColorChange {
+    0%   { border-color: red; }
+    25%  { border-color: orange; }
+    50%  { border-color: yellow; }
+    75%  { border-color: green; }
+    100% { border-color: red; }
 }
 
 .sidebar ul {
@@ -146,7 +120,8 @@ button:hover {
     border: 1px dashed #aaa;
 }
 
-/* Special styling for fragment links */
+
+/* Fragment links */
 .fragment-link {
     color: darkblue;
     font-weight: bold;
@@ -174,7 +149,16 @@ button:hover {
     padding-bottom: 5px;
 }
 
-/* Pseudo-element */
+.content ul {
+    padding-left: 40px;
+}
+
+.content ul li {
+    margin-bottom: 8px;
+}
+
+
+/* Pseudo-element (About Me) */
 .about-text::first-letter {
     font-size: 40px;
     color: green;
@@ -182,18 +166,6 @@ button:hover {
     float: left;
     margin-right: 8px;
     line-height: 1;
-}
-
-
-
-
-
-.content ul {
-    padding-left: 50px;
-}
-
-.content ul li {
-    margin-bottom: 8px;
 }
 
 
@@ -216,7 +188,7 @@ td {
     border: 1px solid #ccc;
 }
 
-/* ===== Zebra Rows ===== */
+/* Zebra rows */
 tbody tr:nth-child(odd) {
     background-color: #f4f4f4;
 }
@@ -225,19 +197,14 @@ tbody tr:nth-child(even) {
     background-color: #ffffff;
 }
 
-/* ===== Different Hover Effects ===== */
-
-/* Hover for ODD rows */
+/* Different hover effects */
 tbody tr:nth-child(odd):hover {
-    background-color: #d6eaf8;   /* light blue */
+    background-color: #d6eaf8;
 }
 
-/* Hover for EVEN rows */
 tbody tr:nth-child(even):hover {
-    background-color: #fdebd0;   /* light orange */
+    background-color: #fdebd0;
 }
-
-
 
 
 /* ===================== FORM ===================== */
@@ -249,56 +216,24 @@ form textarea {
     border: 1px solid #aaa;
 }
 
+button {
+    padding: 10px 25px;
+    background-color: #d6eaf8;
+    color: #154360;
+    border: 1px solid #85c1e9;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
 
-
-/* ===================== FOOTER ===================== */
-footer {
-    background-color: #333;
+button:hover {
+    background-color: #85c1e9;
     color: white;
-    text-align: center;
-    padding: 15px;
-   
-}
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    nav {
-        float: none;
-        margin-top: 10px;
-    }
-}
-
-.radio-group {
-    display: flex;
-    gap: 40px;           /* space between options */
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.radio-option {
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    gap: 8px;            /* space between circle and text */
-    cursor: pointer;
+    transform: scale(1.05);
 }
 
 
-.social-icons {
-    margin-top: 15px;
-}
-
-.social-icons img {
-    width: 30px;
-    margin: 5px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
+/* ===================== SOCIAL ICONS ===================== */
 .social-icons {
     margin-top: 15px;
     display: flex;
@@ -312,6 +247,40 @@ footer {
 }
 
 .social-icons img:hover {
-    transform: scale(1.2);   /* zoom effect */
-    opacity: 0.7;            /* slight fade */
+    transform: scale(1.2);
+    opacity: 0.7;
 }
+
+
+/* ===================== RADIO BUTTON GROUP ===================== */
+.radio-group {
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
