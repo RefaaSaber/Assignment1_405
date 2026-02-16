@@ -23,70 +23,100 @@
 
 <div class="container">
 
-   <div class="sidebar">
-    <img src="Image/profile.png" class="profile-pic">
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+        <img src="Image/profile.png" class="profile-pic" alt="Profile">
 
-    <ul>
-        <li><a href="#about">Portfolio</a></li>
-        <li><a href="#education">For</a></li>
-        <li><a href="#skills">CPIT-405</a></li>
-    </ul>
+        <ul>
+            <li><a href="index.html#about" class="fragment-link">About Me</a></li>
+            <li><a href="index.html#education" class="fragment-link">Education</a></li>
+            <li><a href="index.html#skills" class="fragment-link">Skills</a></li>
+        </ul>
 
-    <hr>
+        <hr>
 
         <h3>Contact</h3>
         <p>Email: <a href="mailto:refaa.med21@gmail.com">refaa.med21@gmail.com</a></p>
         <p>Phone: <a href="tel:+966500000000">+966500000000</a></p>
 
-        <!-- SOCIAL ICONS INSIDE SIDEBAR -->
         <div class="social-icons">
-            <a href="https://x.com/refaa" target="_blank">
+            <a href="https://x.com/yourusername" target="_blank" rel="noopener">
                 <img src="Image/X.jpg" alt="X">
             </a>
 
-            <a href="https://linkedin.com/in/refaa" target="_blank">
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
                 <img src="Image/Linkedin.jpg" alt="LinkedIn">
             </a>
         </div>
     </div>
+    <!-- ✅ SIDEBAR CLOSED CORRECTLY -->
+
 
     <!-- RIGHT CONTENT -->
     <div class="content">
 
         <h2>Contact</h2>
 
-        <form>
+        <form 
+    action="https://webhook.site/47e3ce76-8041-4b53-b8bb-213603248679" 
+    method="POST">
 
-            <label>Name:</label>
-            <input type="text" placeholder="Enter your name" required>
+    <!-- Name (Required) -->
+    <label for="name">Name:</label>
+    <input 
+        type="text" 
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        required
+        minlength="3">
 
-            <label>Email:</label>
-            <input type="email" placeholder="Enter your email" required>
+    <!-- Email (Optional but Valid if Entered) -->
+    <label for="email">Email:</label>
+    <input 
+        type="email" 
+        id="email"
+        name="email"
+        placeholder="Enter your email">
 
-            <label>Message:</label>
-            <textarea rows="5" placeholder="Write your message"></textarea>
+    <!-- Message -->
+    <label for="message">Message:</label>
+    <textarea 
+        id="message"
+        name="message"
+        rows="10"
+        placeholder="Write your message"
+        required
+        minlength="10"></textarea>
 
-            <br><br>
+    <!-- Message Type -->
+    <label><strong>Message Type:</strong></label>
 
-            <label><strong>Message Type:</strong></label>
+    <div class="radio-group">
+        <label class="radio-option">
+            <input 
+                type="radio" 
+                name="type" 
+                value="Complaint"
+                required>
+            Complaint
+        </label>
 
-            <div class="radio-group">
-                <label class="radio-option">
-                    <input type="radio" name="type" value="complaint">
-                    Complaint
-                </label>
+        <label class="radio-option">
+            <input 
+                type="radio" 
+                name="type" 
+                value="Inquiry">
+            Inquiry
+        </label>
+    </div>
 
-                <label class="radio-option">
-                    <input type="radio" name="type" value="inquiry">
-                    Inquiry
-                </label>
-            </div>
+    <br>
 
-            <br>
+    <button type="submit">Send</button>
 
-            <button type="submit">Send</button>
+</form>
 
-        </form>
 
     </div>
 
