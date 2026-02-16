@@ -125,6 +125,7 @@ nav a:hover {
 }
 
 /* ===================== TABLE BASE ===================== */
+
 .schedule-table,
 .courses-table {
     width: 100%;
@@ -132,6 +133,7 @@ nav a:hover {
     margin-top: 20px;
 }
 
+/* Header cells */
 .schedule-table th,
 .courses-table th {
     background-color: #333;
@@ -140,33 +142,51 @@ nav a:hover {
     text-align: center;
 }
 
+/* Normal cells */
 .schedule-table td,
 .courses-table td {
     padding: 10px;
     border: 1px solid #ccc;
 }
 
-/* ===================== SCHEDULE TABLE ZEBRA ===================== */
-.schedule-table tbody tr:nth-child(odd) td {
+/* ===================================================== */
+/* ================= SCHEDULE TABLE ==================== */
+/* ===================================================== */
+
+/* Zebra rows (excluding day column) */
+.schedule-table tbody tr:nth-child(odd) td:not(.day-cell) {
     background-color: #f4f4f4;
 }
 
-.schedule-table tbody tr:nth-child(even) td {
+.schedule-table tbody tr:nth-child(even) td:not(.day-cell) {
     background-color: #ffffff;
 }
 
-/* Schedule Hover */
-.schedule-table tbody tr:nth-child(odd):hover td {
+/* Hover effects (excluding day column) */
+.schedule-table tbody tr:nth-child(odd):hover td:not(.day-cell) {
     background-color: #d6eaf8;
     transition: 0.3s;
 }
 
-.schedule-table tbody tr:nth-child(even):hover td {
+.schedule-table tbody tr:nth-child(even):hover td:not(.day-cell) {
     background-color: #fdebd0;
     transition: 0.3s;
 }
 
-/* ===================== COURSES TABLE ZEBRA ===================== */
+/* Day column style */
+.day-cell {
+    background-color: #d4edda;  /* light green */
+    color: #155724;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+
+/* ===================================================== */
+/* ================= COURSES TABLE ===================== */
+/* ===================================================== */
+
+/* Zebra rows */
 .courses-table tbody tr:nth-child(odd) td {
     background-color: #e8f5e9;
 }
@@ -175,7 +195,7 @@ nav a:hover {
     background-color: #ffffff;
 }
 
-/* Courses Hover */
+/* Hover effects */
 .courses-table tbody tr:nth-child(odd):hover td {
     background-color: #c8e6c9;
     transition: 0.3s;
@@ -186,14 +206,6 @@ nav a:hover {
     transition: 0.3s;
 }
 
-/* ===================== DAY COLUMN ===================== */
-.day-cell {
-    background-color: #d4edda;
-    color: #155724;
-    font-weight: bold;
-    text-align: center;
-    border-top: 1px solid #ccc;
-}
 
 /* ===================== FOOTER ===================== */
 footer {
