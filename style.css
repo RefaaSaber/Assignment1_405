@@ -8,13 +8,9 @@
 
 /* ===================== BODY ===================== */
 body {
-    font-family: "Courier New", monospace;
-
-    background-image: url("Image/background.jpg");
-    background-size: cover;        /* fill screen */
-    background-position: center;   /* center image */
-    background-repeat: no-repeat;  /* no repeating */
-    background-attachment: fixed;  /* stay fixed when scrolling */
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background-attachment: fixed;
+    background-size: cover;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -210,13 +206,6 @@ tbody tr:nth-child(even):hover td {
     background-color: #fdebd0;
 }
 
-/* Day column styling */
-.day-cell {
-   background-color: #d4edda;   
-    color: #155724;              
-    text-align: center;
-    font-weight: bold;
-}
 
 /* Line between each day */
 .day-cell {
@@ -304,4 +293,287 @@ footer {
     .container {
         flex-direction: column;
     }
+}
+
+/* ===================== MY WORKS PAGE ===================== */
+.works-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.work-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 8px 20px rgba(0,0,0,0.15);
+}
+
+.work-tag {
+    display: inline-block;
+    background-color: #333;
+    color: #ffcc00;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+    width: fit-content;
+    font-family: "Courier New", monospace;
+}
+
+.work-card h3 {
+    font-size: 17px;
+    color: #222;
+    margin: 0;
+}
+
+.work-card p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.btn-open {
+    display: block;
+    text-align: center;
+    padding: 9px;
+    background-color: #d6eaf8;
+    color: #154360;
+    border: 1px solid #85c1e9;
+    border-radius: 6px;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.btn-open:hover {
+    background-color: #85c1e9;
+    color: white;
+    transform: scale(1.03);
+}
+
+/* ===================== APP1 - TO DO LIST ===================== */
+.todo-input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-input-row input {
+    flex: 1;
+    padding: 9px 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+}
+
+.todo-input-row input:focus {
+    outline: none;
+    border-color: #85c1e9;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.88);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 14px;
+    transition: background 0.2s;
+}
+
+.task-item:hover { background: rgba(214, 234, 248, 0.6); }
+
+.task-item.done {
+    background: rgba(212, 237, 218, 0.5);
+    border-color: #b2dfdb;
+}
+
+.task-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: green;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 14px;
+    font-family: "Courier New", monospace;
+}
+
+.task-item.done .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 16px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.btn-delete:hover {
+    color: red;
+    background: #fdd;
+    transform: scale(1.1);
+}
+
+.task-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #777;
+    font-family: "Courier New", monospace;
+}
+
+.empty-msg {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* ===================== APP2 - COUNTRY EXPLORER ===================== */
+.search-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.search-row input {
+    flex: 1;
+    padding: 9px 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+}
+
+.search-row input:focus {
+    outline: none;
+    border-color: #85c1e9;
+}
+
+#statusMsg {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 14px;
+    font-family: "Courier New", monospace;
+    min-height: 1.2em;
+}
+
+.countries-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.country-card {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 150px;
+    overflow: hidden;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.country-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 8px 18px rgba(0,0,0,0.13);
+}
+
+.flag-wrap {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.flag-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-body h4 {
+    font-size: 13px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.card-meta {
+    font-size: 11px;
+    color: #666;
+    font-family: "Courier New", monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.state-msg {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+    font-size: 14px;
+    font-family: "Courier New", monospace;
+}
+
+/* ===================== SIDEBAR APP INFO ===================== */
+.app-info p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.sidebar-app-links { margin-top: 15px; }
+
+.sidebar-app-links h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #999;
+    margin-bottom: 8px;
+    border-bottom: 1px dashed #aaa;
+    padding-bottom: 5px;
 }
